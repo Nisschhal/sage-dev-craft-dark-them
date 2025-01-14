@@ -1,5 +1,7 @@
 import { Banner } from "@/components/Banner"
+import { Features } from "@/components/Features"
 import { Hero } from "@/components/Hero"
+import { LogoTicker } from "@/components/LogoTicker"
 import { Navbar } from "@/components/Navbar"
 import Image from "next/image"
 
@@ -9,6 +11,8 @@ export default function Home() {
       <Banner />
       <Navbar />
       <Hero />
+      <LogoTicker />
+      <Features />
     </>
   )
 }

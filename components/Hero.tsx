@@ -5,7 +5,7 @@ import Image from "next/image"
 export const Hero = () => {
   return (
     <div className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-24 relative overflow-hidden">
-      <div className="absolute top-[calc(100%-120px)] w-[750px] h-[375px] sm:w-[1536] sm:h-[768] lg:w-[2400] lg:h-[1200] rounded-[100%] left-1/2 -translate-x-1/2 border border-[#b48cde] bg-[radial-gradient(closest-side,#000_82%,#9560EB)]"></div>
+      <div className="absolute top-[calc(100%-120px)] w-[750px] h-[375px] sm:w-[1536] sm:h-[768] lg:w-[2800] lg:h-[1200] rounded-[100%] left-1/2 -translate-x-1/2 border border-[#b48cde] bg-[radial-gradient(closest-side,#000_95%,#9560EB)]"></div>
       <div className="container relative">
         <div className="flex justify-center items-center">
           <a
