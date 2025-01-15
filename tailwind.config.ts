@@ -13,8 +13,14 @@ export default {
         foreground: "var(--foreground)",
       },
       container: {
-        padding: "1rem",
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+        },
         center: true,
+      },
+      spacing: {
+        "custom-y-padding": "96px",
       },
     },
   },

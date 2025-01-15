@@ -14,6 +14,15 @@
   }
 }
 
+@layer components {
+  .section-title {
+    @apply font-bold text-5xl sm:text-7xl text-center tracking-tighter;
+  }
+  .section-description {
+    @apply text-xl tracking-tight mt-5 text-white/70 text-center;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

@@ -20,13 +20,11 @@ const features = [
 
 export const Features = () => {
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24">
+    <section className="bg-black text-white py-[72px] sm:py-custom-y-padding">
       <div className="container ">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-center text-5xl font-bold tracking-tighter">
-            Everything you need
-          </h2>
-          <p className="text-center text-xl mt-5 text-white/70">
+          <h2 className="section-title">Everything you need</h2>
+          <p className="section-description">
             Enjoy customizable lists, team work tools, and smart tracking all in
             one plac. Set task, get reminders, and see your progress simply and
             quickly
@@ -47,6 +45,6 @@ export const Features = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

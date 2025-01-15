@@ -1,3 +1,8 @@
+"use client"
+import clsx from "clsx"
+import { useState } from "react"
+import { FiMinus, FiPlus } from "react-icons/fi"
+
 const items = [
   {
     question: "What payment methods do you accept?",
@@ -19,8 +24,68 @@ const items = [
     answer:
       "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
   },
-];
+]
+
+const AccordianItem = ({
+  question,
+  answer,
+  isOpen,
+  onClick,
+}: {
+  question: string
+  answer: string
+  isOpen: boolean
+  onClick: () => void
+}) => {
+  return (
+    <div className="py-7 border-b border-white/30 cursor-pointer">
+      <div className="flex items-center " onClick={onClick}>
+        <span className="flex-1 text-lg font-bold">{question}</span>
+        {isOpen ? <FiMinus /> : <FiPlus />}
+      </div>
+      <div
+        className={clsx(
+          {
+            hidden: !isOpen,
+            "": isOpen, // remove hide when openned
+          },
+          "mt-4 pl-2"
+        )}
+      >
+        {answer}
+      </div>
+    </div>
+  )
+}
 
 export const FAQs = () => {
-  return null;
-};
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  // set the active index,
+  // if clicked same item then set active index to null
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index)
+  }
+
+  return (
+    <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-custom-y-padding">
+      <div className="container">
+        <div className="max-w-xl mx-auto">
+          <h2 className="section-title">Frequently asked questions</h2>
+        </div>
+        {/* FAQ Cards */}
+        <div className="mt-12 max-w-5xl mx-auto">
+          {items.map((item, index) => (
+            <AccordianItem
+              question={item.question}
+              answer={item.answer}
+              key={index}
+              isOpen={activeIndex === index} // check if the index matches the item index, if so open item
+              onClick={() => toggleAccordion(index)} // toggle acordian by passing its index to set active index
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
