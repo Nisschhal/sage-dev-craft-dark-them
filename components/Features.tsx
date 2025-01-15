@@ -1,5 +1,6 @@
-import ecoIcon from "@/assets/icons/ecosystem.svg"
-import Image from "next/image"
+"use client"
+import { useEffect } from "react"
+import { Feature } from "./Feature"
 const features = [
   {
     title: "Integration Ecosystem",
@@ -19,6 +20,7 @@ const features = [
 ]
 
 export const Features = () => {
+  useEffect(() => {}, [])
   return (
     <section className="bg-black text-white py-[72px] sm:py-custom-y-padding">
       <div className="container ">
@@ -32,16 +34,11 @@ export const Features = () => {
         </div>
         <div className="mt-16 flex flex-col sm:flex-row gap-4">
           {features.map((feature, index) => (
-            <div
-              className="border border-white/30 px-5 py-10 text-center rounded-xl"
+            <Feature
               key={index}
-            >
-              <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg sm:flex-1">
-                <Image src={ecoIcon} alt="eco icon" />
-              </div>
-              <h3 className="mt-6 font-bold">{feature.title}</h3>
-              <p className="mt-2 text-white/70">{feature.description}</p>
-            </div>
+              title={feature.title}
+              description={feature.description}
+            />
           ))}
         </div>
       </div>
