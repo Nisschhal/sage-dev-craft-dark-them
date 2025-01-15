@@ -21,6 +21,9 @@
   .section-description {
     @apply text-xl tracking-tight mt-5 text-white/70 text-center;
   }
+  .logo-ticker-img {
+    @apply h-8 flex-none w-auto;
+  }
 }
 
 body {
