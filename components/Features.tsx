@@ -1,5 +1,3 @@
-"use client"
-import { useEffect } from "react"
 import { Feature } from "./Feature"
 const features = [
   {
@@ -20,7 +18,6 @@ const features = [
 ]
 
 export const Features = () => {
-  useEffect(() => {}, [])
   return (
     <section className="bg-black text-white py-[72px] sm:py-custom-y-padding">
       <div className="container ">

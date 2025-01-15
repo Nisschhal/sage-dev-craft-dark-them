@@ -1,5 +1,4 @@
 import logoImage from "@/assets/images/logosaas.png"
-import MenuIcon from "@/assets/icons/menu.svg"
 import { FiMenu } from "react-icons/fi"
 
 import Image from "next/image"

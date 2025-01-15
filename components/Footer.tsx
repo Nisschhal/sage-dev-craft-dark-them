@@ -2,8 +2,6 @@ import {
   RiFacebookFill,
   RiInstagramFill,
   RiPinterestFill,
-  RiTwitchFill,
-  RiTwitterFill,
   RiTwitterXFill,
   RiYoutubeFill,
 } from "react-icons/ri"

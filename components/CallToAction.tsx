@@ -1,8 +1,7 @@
 "use client"
 import helixImage from "@/assets/images/helix2.png"
 import emojiStartImage from "@/assets/images/emojistar.png"
-import Image from "next/image"
-import { motion, useMotionValue, useScroll, useTransform } from "motion/react"
+import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
 
 export const CallToAction = () => {

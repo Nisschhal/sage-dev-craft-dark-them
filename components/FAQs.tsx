@@ -1,5 +1,4 @@
 "use client"
-import clsx from "clsx"
 import { useState } from "react"
 import { FiMinus, FiPlus } from "react-icons/fi"
 
@@ -26,7 +25,7 @@ const items = [
   },
 ]
 
-import { AnimatePresence, motion } from "motion/react"
+import { motion } from "motion/react"
 
 const AccordianItem = ({
   question,

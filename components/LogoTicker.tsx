@@ -22,7 +22,7 @@ export const LogoTicker = () => {
     <div className="bg-black">
       <div className="py-20">
         <h2 className="text-xl text-center text-white/70">
-          Trusted by the world's most innovative teams
+          Trusted by the world&apos;s most innovative teams
         </h2>
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black,transparent)] overflow-hidden mt-8">
           <motion.div
