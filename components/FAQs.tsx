@@ -26,6 +26,8 @@ const items = [
   },
 ]
 
+import { AnimatePresence, motion } from "motion/react"
+
 const AccordianItem = ({
   question,
   answer,
@@ -38,23 +40,21 @@ const AccordianItem = ({
   onClick: () => void
 }) => {
   return (
-    <div className="py-7 border-b border-white/30 cursor-pointer">
-      <div className="flex items-center " onClick={onClick}>
+    // layout for flex
+    <motion.div layout className="py-7 border-b border-white/30 cursor-pointer">
+      {/* // header|question for scale error, put layout to prevent scaling error */}
+      <motion.div layout className="flex items-center " onClick={onClick}>
         <span className="flex-1 text-lg font-bold">{question}</span>
         {isOpen ? <FiMinus /> : <FiPlus />}
-      </div>
-      <div
-        className={clsx(
-          {
-            hidden: !isOpen,
-            "": isOpen, // remove hide when openned
-          },
-          "mt-4 pl-2"
-        )}
-      >
-        {answer}
-      </div>
-    </div>
+      </motion.div>
+      {/* <AnimatePresence> */}
+      {isOpen && (
+        <motion.div className="mt-2 pl-2" transition={{ delay: 1 }}>
+          {answer}
+        </motion.div>
+      )}
+      {/* </AnimatePresence> */}
+    </motion.div>
   )
 }
 
@@ -68,7 +68,7 @@ export const FAQs = () => {
   }
 
   return (
-    <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-custom-y-padding">
+    <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-custom-y-padding h-[780px]">
       <div className="container">
         <div className="max-w-xl mx-auto">
           <h2 className="section-title">Frequently asked questions</h2>

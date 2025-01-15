@@ -1,6 +1,8 @@
+"use client"
 import helixImage from "@/assets/images/helix2.png"
 import emojiStartImage from "@/assets/images/emojistar.png"
 import Image from "next/image"
+import { motion } from "motion/react"
 export const CallToAction = () => {
   return (
     <div className="bg-black text-white py-custom-y-padding text-center">
